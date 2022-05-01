@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--head tag used to define characteristics of basic page structure-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--title tag used to label the tab in the browser-->
+    <title>Christopher Borin</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <!--External CSS file containing global styling attributes and values-->
+    <link rel="stylesheet" type="text/css" href="css/chrisStyle.css">
+    <script src="js/myjavascript.js"></script>
+    <style>
+        @keyframes blinker {
+            40% {
+                opacity: 0;
+            }
+        }
+
+        .blink_me_alarm {
+            animation: blinker 3s step-start infinite;
+            animation-delay: 5s;
+            color: rgb(79, 0, 168);
+        }
+    </style>
+</head>
+
+<body id="all" style="margin-bottom: 40px;">
+    <br />
+    <!--anchor tags embedded in h1 header tags for alignment, first implementation of Nav Bar-->
+    <!--anchor tags are used to navigate to another URL, hyperlink <a href>-->
+
+    <!--Bootstrap navbar-->
+    <nav class="navbar navbar-light">
+        <!--Hyperlink for home button-->
+        <a class="navbar-brand" href="index.html" style="color: rgb(155, 10, 10); margin-left: 18px;">Home</a>
+        <!--Noncollapsable navbar button-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--All collapsable navbar hyperlinks in an unordered list format-->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutme.html" style="color: rgb(155, 10, 10);">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="favmedia.html" style="color: rgb(155, 10, 10);">Media</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="photogal.html" style="color: rgb(155, 10, 10);">Photos</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div align="center">
+        <!--image tag embedded in div tag, also used for alignment-->
+        <!--alt attribute used as placeholder if image cannot be loaded-->
+        <!--src attribute used for directory location of image-->
+        <!--image location does not need entire file directory since images folder is inside of program root (MilestoneThree)-->
+
+        <!--width and height values are in pixels because photo size is already formatted for smart phones-->
+        <!--percents scale pictures down, this allows the picture to be seen in its entirety no matter the platform-->
+        <img onmousedown="profileBig()" onmouseup="profileSmall()" id="profile"
+            style="cursor: pointer; margin-top: 20px;" src="images/ProfilePicDup.jpg" alt="Profile Photo" width="320"
+            height="320" />
+        <p id="eyes" style="margin-top: 6px; font-size: 24px;">Click on my Profile Picture to zoom in</p>
+        <!--h2 styling taken care of in external CSS file-->
+        <h2>Christopher Borin</h2>
+        <br /><br />
+        <button onclick="backColor()" style="font-size: large; cursor: pointer;">Cycle Background Colors</button>
+        <!--break tag used to print on the next line-->
+        <br /><br /><br /><br />
+
+        <!--h3 style overrides external CSS definition-->
+        <h3 class="blink_me_alarm" style="text-decoration: none;">Welcome to my Website!</h3>
+        <br /><br />
+        <p style="font-family: Arial; font-weight: bold; font-size: 38px;">Feel free to access any page of the website
+            using the
+            corresponding links at the top of the page by expanding the navigation bar
+        </p>
+        <br />
+        <!--width and height values are in percents because the original image sizes are too big for smartphones (smallest possible screen)-->
+        <img id="profile" src="images/MultiCam.jpg" alt="Face Cut-Outs" width="90%" height="90%" />
+        <br />
+        <br /><br />
+        <p>This website is intended to serve as my autobiography and has plenty of informational
+            and entertaining content to browse. I hope you learn something about me while
+            you're here so I wouldn't have wasted any of your limited time.
+        </p>
+        <br />
+        <!--width and height values are in percents because the original image sizes are too big for smartphones (smallest possible screen)-->
+        <img src="images/BeavsGraduationDup.JPG" alt="High School Graduation" width="90%" height="90%" />
+        <br /><br />
+        
+        <!--Bootstrap form for user data entry-->
+        <div class="container" align="center">
+            <h1>Contact Me</h1>
+            <!--post allows for most secure HTTP-->
+            <form method="post" action="https://postman-echo.com/post">
+                <!--Label for text entry box-->
+                <div class="form-group row">
+                    <label for="name" class="col-sm-2 col-form-label" style="font-weight: bold; font-size: larger;">Name</label>
+                    <!--Text entry box-->
+                    <!--input tag is single line user input-->
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="name" name="name">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <!--label tag allocates 2 blocks of the 12 block Bootstrap grid-->
+                    <label for="phone" class="col-sm-2 col-form-label" style="font-weight: bold; font-size: larger;">Phone</label>
+                    <!--input tag allocates 10 blocks of the 12 block Bootstrap grid-->
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="phone" name="phone">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="email" class="col-sm-2 col-form-label" style="font-weight: bold; font-size: larger;">Email</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="email" name="email">
+                    </div>
+                </div>
+                <!--textarea tag allows for multiple lines of user input-->
+                <div class="form-group row">
+                    <label for="message" class="col-sm-2 col-form-label" style="font-weight: bold; font-size: larger;">Message</label>
+                    <div class="col-sm-10">
+                        <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+                    </div>
+                </div>
+                <!--button tag which transfers the forms user input-->
+                <!--type attribute has a value of "submit" since this button allocates and transfers form data-->
+                <div class="form-group row">
+                    <div class="col-sm-12">
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </div>
+                </div>
+            </form>
+            </br>
+        </div>
+    </div>
+</body>
+
+</html>

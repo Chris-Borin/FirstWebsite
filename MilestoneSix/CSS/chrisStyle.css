@@ -1,0 +1,125 @@
+/*Defines margins and background color of all pages*/
+body {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  background: rgb(152, 251, 152);
+}
+
+/*Defines table headings for song and YouTube video tables*/
+h1 {
+  color: maroon;
+  font-family: Comic Sans MS;
+}
+
+/*Defines name attributes*/
+h2 {
+  color: #18099c;
+  font-family: Verdana;
+  font-weight: bold;
+  font-size: 48px;
+}
+
+/*Defines aboutme heading attributes*/
+h3 {
+  color: indigo;
+  font-family: Verdana;
+  text-decoration: underline;
+  font-size: 36px;
+}
+
+/*Defines heading for photo gallery*/
+h4 {
+  font-size: 68px;
+  color: rgb(1, 99, 99)
+}
+
+/*Defines general interest attributes*/
+li {
+  color: black;
+  font-family: Candara;
+  font-size: 32px;
+}
+
+/*Defines consistent paragraph attributes*/
+p {
+  font-family: "Times New Roman";
+  font-size: 30px;
+  margin-top: 26px;
+  margin-left: 26px;
+  margin-right: 26px;
+}
+
+/*Defines width for nav bar*/
+table {
+  width: 50%;
+  text-align: center;
+}
+
+/*Defines width for elements of nav bar*/
+th {
+  width: 25%;
+}
+
+/*Defines attributes for song table*/
+td {
+  background-color: indigo;
+  color: ghostwhite;
+  font-family: Courier;
+  font-size: 24px;
+}
+
+/*Defines row attributes of flexbox*/
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4px 0;
+}
+
+/*Defines column attributes of flexbox, designed for 2 columns*/
+.column {
+  flex: 48%;
+  max-width: 50%;
+  padding: 4px 0 0 6px;
+}
+
+/*Defines flexbox image elements*/
+.column img {
+  margin-top: 16px;
+  vertical-align: middle;
+}
+
+/*Defines resizing protocol for flexbox*/
+@media (max-width: 600px) {
+  .column, .navbar {
+    flex: 100%;
+    max-width: 100%;
+    flex-direction: column;
+  }
+}
+
+/*Defines main navbar attributes*/
+.navbar {
+  display: flex;
+  flex: 100%;
+  justify-content: center;
+}
+
+/*Defines attributes of nav bar links*/
+.navbar a {
+  font-family: Impact;
+  font-weight: 100;
+  font-size: 36px;
+  color: rgb(155, 10, 10);
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  padding: 20px 38px 25px;
+  
+}
+
+/*Displays a pointer cursor anytime a link is hovered over and changes the background color of the element*/
+.navbar a:hover {
+  background-color: rgb(255,215,0);
+  cursor: pointer;
+}

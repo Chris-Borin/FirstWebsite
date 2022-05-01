@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christopher Borin</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <!--External CSS file containing global styling attributes and values-->
+    <link rel="stylesheet" type="text/css" href="css/chrisStyle.css">
+    <script src="js/myjavascript.js"></script>
+</head>
+
+<body id="all">
+    <br />
+
+    <nav class="navbar navbar-light">
+        <a class="navbar-brand" href="index.html" style="color: rgb(155, 10, 10); margin-left: 18px;">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutme.html" style="color: rgb(155, 10, 10);">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="favmedia.html" style="color: rgb(155, 10, 10);">Media</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="photogal.html" style="color: rgb(155, 10, 10);">Photos</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div align="center">
+        <!--width and height values are in pixels because photo size is already formatted for smart phones-->
+        <!--percents scale pictures down, this allows the picture to be seen in its entirety no matter the platform-->
+        <img onmousedown="profileBig()" onmouseup="profileSmall()" id="profile"
+            style="cursor: pointer; margin-top: 20px;" src="images/ProfilePicDup.jpg" alt="Profile Photo" width="320"
+            height="320" />
+        <p id="eyes" style="margin-top: 6px; font-size: 24px;">Click on my Profile Picture to zoom in</p>
+
+        <!--h2 styling taken care of in external CSS file-->
+        <h2>Christopher Borin</h2>
+        <br /><br />
+        <button onclick="backColor()" style="font-size: large; cursor: pointer;">Cycle Background Colors</button>
+        <br /><br />
+
+        <!--h3 styling taken care of in external CSS file-->
+        <h3 align="left">My Story</h3>
+        <p>
+            My entire family originated from Russia and they came to the United States in 1991. I was the first person
+            in my
+            family to be born in the US, commonly known as first generation, on November 4th, 2000 in Denver Colorado.
+            I moved to San Diego California, where I was eventually raised, when I was five years old because my mom
+            wanted to live in a warm place for once in her life. She fell in love with San Diego and never left.
+            <br /><br />
+            I played football and rugby in high school without any previous knowledge of either sport to try
+            something new and make friends.
+            I quickly gained a love for both sports and ended up playing them all throughout high school.
+            My background in sports bred my present day passion for general fitness and healthy nutrition.
+            <br /><br />
+            I was borderline addicted to video games growing up which lead to my eventual desire to study Computer
+            Science in college.
+            After taking Calculus I and Introduction to Computer Architecture, I realized that I was only cut
+            out to focus on the coding aspect of the degree. That's when I decided to change my major to Software
+            Development. Now I live out my days coding and learning how to properly design software which can be
+            used in a professional environment.
+        </p>
+        <br /><br />
+    </div>
+    <!--added div tag and used a flexbox to display both images on the same line, or stacked on top of each other if screen size is small enough-->
+    <!--aligned items according to baseline to display more evenly with height-->
+    <div class="row" style="align-items:baseline">
+        <div class="column">
+            <img src="images/NoseguardDup.jpg" alt="Noseguard" style="width:95%">
+        </div>
+
+        <div class="column">
+            <img src="images/Ski.jpg" alt="Skiing" style="width:95%">
+        </div>
+    </div>
+    <br /><br />
+
+    <!--h3 styling taken care of in external CSS file-->
+    <h3>General Interests:</h3>
+
+    <!--unordered List tags used for bulleted lists <ul>-->
+    <!--ordered List tags used for numerical lists <ol>-->
+    <!--list tag embedded in font tag to manipulate the font of the List-->
+    <ul>
+        <li>Football</li>
+        <li>Rugby</li>
+        <li>Baseball</li>
+        <li>Skiing</li>
+        <li>Video Games</li>
+        <li>Computer Programming</li>
+        <li>Intuitive Problem Solving</li>
+        <li>Seeing Friends</li>
+        <li>Weight Lifting</li>
+        <li>Cats</li>
+        <li>Traveling</li>
+        <li>Longboarding</li>
+    </ul>
+    <br />
+    <!--width and height values are in pixels because photo size is already formatted for smallest smart phone-->
+    <!--percents scale pictures down, this allows the picture to be seen in its entirety no matter the platform-->
+    <p align="center">
+        <img src="images/Longboard.JPG" alt="Longboarding" width="333" height="620" />
+    </p>
+    <br />
+</body>
+
+</html>

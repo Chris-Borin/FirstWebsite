@@ -80,12 +80,12 @@ td {
 .column {
   flex: 48%;
   max-width: 50%;
-  padding: 4px 0 0 6px;
+  padding: 0 0 0 6px;
 }
 
 /*Defines flexbox image elements*/
 .column img {
-  margin-top: 16px;
+  margin-top: 12px;
   vertical-align: middle;
 }
 
